@@ -13,6 +13,18 @@ Docker SSH Tunnel is a pre configured SSH Daemon to tunnel a local port.
    ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=300 -o ConnectTimeout=5 -g -R 9999:localhost:<local_port> -p 9714 tunnel@<ssh_host>
    ```
 
+As a scripts witch automatically reconnects you could use something like this:
+```bash
+#!/bin/sh
+
+while :;
+do
+  echo "Staring SSH tunnel..."
+  /usr/bin/ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=300 -o ConnectTimeout=5 -g -R 9999:localhost:<local_port> -p 9714 tunnel@<ssh_host>
+  echo "SSH tunnel has exited."
+done
+```
+
 ## Deployment
 
 This image is available in [Docker Hub](https://hub.docker.com/r/marcelcoding/ssh-tunnel) and the
