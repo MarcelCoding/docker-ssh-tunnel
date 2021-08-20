@@ -21,7 +21,8 @@ while :;
 do
   echo "Staring SSH tunnel..."
   /usr/bin/ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=300 -o ConnectTimeout=5 -g -R 9999:localhost:<local_port> -p 9714 tunnel@<ssh_host>
-  echo "SSH tunnel has exited."
+  echo "SSH tunnel has exited. Retry in 10 seconds..."
+  sleep 10
 done
 ```
 
