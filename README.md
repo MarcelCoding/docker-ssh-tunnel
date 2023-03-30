@@ -1,8 +1,6 @@
 # Docker SSH Tunnel
 
 [![Releases](https://img.shields.io/github/v/tag/MarcelCoding/docker-ssh-tunnel?label=latest%20version&style=flat-square)](https://github.com/marcelcoding/docker-ssh-tunnel/releases)
-[![Build](https://img.shields.io/github/workflow/status/MarcelCoding/docker-ssh-tunnel/CI?label=CI&style=flat-square)](https://github.com/marcelcoding/docker-ssh-tunnel/actions)
-[![DockerHub](https://img.shields.io/docker/pulls/marcelcoding/ssh-tunnel?style=flat-square)](https://hub.docker.com/r/marcelcoding/ssh-tunnel)
 
 Docker SSH Tunnel is a pre configured SSH Daemon to tunnel a local port.
 
